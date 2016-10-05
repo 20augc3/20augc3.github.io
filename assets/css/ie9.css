@@ -1,40 +1,55 @@
 /*
-	Phantom by HTML5 UP
+	Photon by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Tiles */
+/* Header */
 
-	.tiles:after {
-		content: '';
-		display: block;
-		clear: both;
+	#header {
+		background-image: none;
+		filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#4fa49a", endColorStr="#4361c2", GradientType=1);
+		position: relative;
 	}
 
-	.tiles article {
-		float: left;
-	}
-
-		.tiles article > a {
-			padding-top: 50%;
-			margin-top: -1.75em;
+		#header:before {
+			background-image: url("images/overlay2.png"), url("images/overlay3.svg");
+			background-position: top left,							center center;
+			background-size: auto,								cover;
+			content: '';
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
 		}
 
-		body:not(.is-touch) .tiles article:hover > .image {
-			-moz-transform: none;
-			-webkit-transform: none;
-			-ms-transform: none;
-			transform: none;
+		#header > * {
+			position: relative;
+			z-index: 1;
 		}
 
 /* Footer */
 
-	#footer > .inner section {
-		float: left;
+	#footer {
+		background-image: none;
+		filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#4361c2", endColorStr="#4fa49a", GradientType=1);
+		position: relative;
 	}
 
-	#footer > .inner .copyright {
-		clear: both;
-		padding-top: 4em;
-	}
+		#footer:before {
+			background-image: url("images/overlay2.png"), url("images/overlay4.svg");
+			background-position: top left,							center center;
+			background-size: auto,								cover;
+			content: '';
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		#footer > * {
+			position: relative;
+			z-index: 1;
+		}

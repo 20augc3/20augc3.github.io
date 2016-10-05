@@ -4,49 +4,63 @@
 @import 'libs/skel';
 
 /*
-	Phantom by HTML5 UP
+	Photon by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Tiles */
+/* Header */
 
-	.tiles {
-		&:after {
+	#header {
+		$from: _palette(accent3-alt);
+		$to: _palette(accent6-alt);
+
+		background-image: none;
+		filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#{$from}", endColorStr="#{$to}", GradientType=1);
+		position: relative;
+
+		&:before {
+			background-image:		url('images/overlay2.png'),		url('images/overlay3.svg');
+			background-position:	top left,							center center;
+			background-size:		auto,								cover;
 			content: '';
-			display: block;
-			clear: both;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
 		}
 
-		article {
-			float: left;
-
-			> a {
-				padding-top: 50%;
-				margin-top: -1.75em;
-			}
-
-			body:not(.is-touch) & {
-				&:hover {
-					> .image {
-						@include vendor('transform', 'none');
-					}
-				}
-			}
+		> * {
+			position: relative;
+			z-index: 1;
 		}
 	}
 
 /* Footer */
 
 	#footer {
-		> .inner {
-			section {
-				float: left;
-			}
+		$from: _palette(accent6-alt);
+		$to: _palette(accent3-alt);
 
-			.copyright {
-				clear: both;
-				padding-top: (_size(element-margin) * 2);
-			}
+		background-image: none;
+		filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#{$from}", endColorStr="#{$to}", GradientType=1);
+		position: relative;
+
+		&:before {
+			background-image:		url('images/overlay2.png'),		url('images/overlay4.svg');
+			background-position:	top left,							center center;
+			background-size:		auto,								cover;
+			content: '';
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		> * {
+			position: relative;
+			z-index: 1;
 		}
 	}
